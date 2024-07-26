@@ -1,0 +1,57 @@
+.download_btn {
+    display: block;
+    position: relative;
+    padding: 0.7em 0.9em;
+    background-color: #1981f7;
+    border-radius: 4px;
+    margin: 30px auto;
+    width: 180px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.download_btn:hover{
+    text-decoration: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.download_btn > i{
+    margin-right: 0.5rem;
+}
+
+._dlcomplete_effect::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #b5e7ff;
+    transition: 300ms;
+    animation: shine 2.5s ease-in-out;
+}
+
+._download_complete{
+    background-color: #2FB65A;
+}
+
+._download_error {
+    background-color:#FF3C41; 
+}
+
+._downloading {
+    background: blue;
+}
+
+@-webkit-keyframes shine{
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
